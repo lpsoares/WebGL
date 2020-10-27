@@ -330,17 +330,17 @@
         // desenhar o quadrado.
         mat4.translate(modelViewMatrix,    // matriz de destino
                        modelViewMatrix,    // matriz para transladar
-                       [0.0, 0.0, -6.0]);  // translação
+                       [2.0, 0.0, -10.0]);  // translação
+
+        // mat4.rotate(modelViewMatrix,  // matriz de destino
+        //             modelViewMatrix,  // matriz para rotacionar
+        //             squareRotation,   // quantidade de radianos a se rotacionar
+        //             [0, 0, 1]);       // eixo para ser girar em volta
 
         mat4.rotate(modelViewMatrix,  // matriz de destino
                     modelViewMatrix,  // matriz para rotacionar
-                    squareRotation,   // quantidade de radianos a se rotacionar
-                    [0, 0, 1]);       // eixo para ser girar em volta
-
-        mat4.rotate(modelViewMatrix,  // matriz de destino
-                    modelViewMatrix,  // matriz para rotacionar
-                    squareRotation*.7,// quantidade de radianos a se rotacionar * 0.7
-                    [0, 1, 0]);       // eixo para ser girar em volta
+                    0,// quantidade de radianos a se rotacionar * 0.7
+                    [0, 0, 0]);       // eixo para ser girar em volta
 
 
         // Diga ao WebGL como retirar as posições do
@@ -433,7 +433,7 @@
 
         {
             const offset = 0;
-            const vertexCount = 36;
+            const vertexCount = 3;
             const type = gl.UNSIGNED_SHORT;
             gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
         }
