@@ -17,14 +17,27 @@ y_max = int(dimensões[1])
 
 i = 0
 coordenadas = []
-for y in range(y_max):
-    for x in range(x_max):
-        coordenadas.append(x)
-        coordenadas.append(y)
+for yi in range(y_max):
+    for xi in range(x_max):
+        x = xi
+        y = yi
+
+        if x <= x_max/2:
+            x = -x_max/2 + x
+        else:
+            x = x - x_max/2
+
+        if y <= y_max/2:
+            y = -y_max/2 + y
+        else:
+            y = y - y_max/2
+
+        coordenadas.append(int(x))
+        coordenadas.append(int(y))
         coordenadas.append(round(pontos[i]/p_max * 10, 2))
         i += 1
 
-#print(coordenadas)
+print(coordenadas)
 
 indices = []
 
@@ -84,4 +97,4 @@ for altitude in pontos:
         colors.append(round(0.2*k + 0.8))
         colors.append(1)
 
-print(colors)
+#print(colors)
