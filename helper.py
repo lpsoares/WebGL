@@ -37,7 +37,7 @@ for yi in range(y_max):
         coordenadas.append(round(pontos[i]/p_max * 10, 2))
         i += 1
 
-print(coordenadas)
+#print(coordenadas)
 
 indices = []
 
@@ -85,8 +85,6 @@ for altitude in pontos:
         colors.append(round(0.6*k + 0.4,2))
         colors.append(0.1)
         colors.append(1)
-
-
     
     else:
 
